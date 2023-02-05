@@ -170,6 +170,7 @@
             this.BtnSum.TabIndex = 13;
             this.BtnSum.Text = "+";
             this.BtnSum.UseVisualStyleBackColor = true;
+            this.BtnSum.Click += new System.EventHandler(this.BtnSum_Click);
             // 
             // BtnMultiply
             // 
@@ -179,6 +180,7 @@
             this.BtnMultiply.TabIndex = 14;
             this.BtnMultiply.Text = "*";
             this.BtnMultiply.UseVisualStyleBackColor = true;
+            this.BtnMultiply.Click += new System.EventHandler(this.BtnMultiply_Click);
             // 
             // BtnDivide
             // 
@@ -188,6 +190,7 @@
             this.BtnDivide.TabIndex = 15;
             this.BtnDivide.Text = "/";
             this.BtnDivide.UseVisualStyleBackColor = true;
+            this.BtnDivide.Click += new System.EventHandler(this.BtnDivide_Click);
             // 
             // BtnResult
             // 
@@ -197,6 +200,7 @@
             this.BtnResult.TabIndex = 16;
             this.BtnResult.Text = "=";
             this.BtnResult.UseVisualStyleBackColor = true;
+            this.BtnResult.Click += new System.EventHandler(this.BtnResult_Click);
             // 
             // BtnDot
             // 
@@ -206,6 +210,7 @@
             this.BtnDot.TabIndex = 17;
             this.BtnDot.Text = ".";
             this.BtnDot.UseVisualStyleBackColor = true;
+            this.BtnDot.Click += new System.EventHandler(this.BtnDot_Click);
             // 
             // Btn0
             // 
@@ -225,6 +230,7 @@
             this.BtnMinus.TabIndex = 19;
             this.BtnMinus.Text = "-";
             this.BtnMinus.UseVisualStyleBackColor = true;
+            this.BtnMinus.Click += new System.EventHandler(this.BtnMinus_Click);
             // 
             // BtnRemove
             // 
@@ -234,6 +240,7 @@
             this.BtnRemove.TabIndex = 20;
             this.BtnRemove.Text = "C";
             this.BtnRemove.UseVisualStyleBackColor = true;
+            this.BtnRemove.Click += new System.EventHandler(this.BtnRemove_Click);
             // 
             // BtnClear
             // 
@@ -243,6 +250,7 @@
             this.BtnClear.TabIndex = 21;
             this.BtnClear.Text = "CE";
             this.BtnClear.UseVisualStyleBackColor = true;
+            this.BtnClear.Click += new System.EventHandler(this.BtnClear_Click);
             // 
             // FrmClaculator
             // 
