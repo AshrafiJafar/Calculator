@@ -52,6 +52,7 @@
             // 
             // TxtScreen
             // 
+            this.TxtScreen.Enabled = false;
             this.TxtScreen.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtScreen.Location = new System.Drawing.Point(15, 47);
             this.TxtScreen.Name = "TxtScreen";
@@ -277,8 +278,11 @@
             this.Controls.Add(this.Btn1);
             this.Controls.Add(this.LblHistory);
             this.Controls.Add(this.TxtScreen);
+            this.KeyPreview = true;
             this.Name = "FrmClaculator";
             this.Text = "Calculator";
+            this.Load += new System.EventHandler(this.FrmClaculator_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FrmClaculator_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 

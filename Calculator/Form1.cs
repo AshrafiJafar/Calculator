@@ -75,7 +75,10 @@ namespace Calculator
 
         private void TxtScreen_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if(e.KeyChar == (int)Keys.Enter)
+            {
+                BtnResult_Click(sender, e);
+            }
 
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.') && !IsOperator(e.KeyChar))
             {
@@ -83,7 +86,7 @@ namespace Calculator
                 return;
             }
 
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            if ((e.KeyChar == '.') && TxtScreen.Text.IndexOf('.') > -1)
             {
                 e.Handled = true;
                 return;
@@ -108,7 +111,7 @@ namespace Calculator
                 TxtScreen.Focus();
             }
 
-
+            this.ActiveControl = null;
         }
 
         private bool IsOperator(char keyChar)
@@ -180,6 +183,16 @@ namespace Calculator
                     throw new InvalidOperationException();
             }
 
+        }
+
+        private void FrmClaculator_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            TxtScreen_KeyPress(sender, e);
+        }
+
+        private void FrmClaculator_Load(object sender, EventArgs e)
+        {
+            this.ActiveControl = LblHistory;
         }
     }
 }
